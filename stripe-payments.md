@@ -65,9 +65,9 @@ And in future scenarios, the **payment participant **could include:
 and/or ([company] Platform → [company] Org)
 	|
 |	|	|	|
-|Post-launch	|Peer to peer ticket resales	|[company] User → [company] User	|
+|Post-launch	|Peer to peer product resales	|[company] User → [company] User	|
 |Post-launch	|Tools for B2B payout 
-(eg: LA [team] send the 49ers a proportion of total ticket sales)	|[company] Org → [company] Org    
+(eg: LA [team] send the 49ers a proportion of total product sales)	|[company] Org → [company] Org    
          
 and/or ([company] Org → Tertiary Org)
 	|
@@ -139,7 +139,7 @@ Account holders begin their journey in the [company] platform and are redirected
     * Stripe is not a hidden concept in this case - users are sent through an explicit account setup flow with Stripe. We get a lot of control over the branding of this process, however, it is made clear to the user that they are activating an additional Stripe account. 
     * With Standard accounts, the platform assumes fraud and dispute liability when using destination charges, but the user (merchant) is responsible when using direct charges.
 
-The big drawback to this approach is in the general consumer case. Any consumers who wish to pay / re-sell tickets would need to go through this additional flow to set up a Stripe account. Payments could only be processed once this account is established, otherwise, they would need to make anonymous purchases.
+The big drawback to this approach is in the general consumer case. Any consumers who wish to pay / re-sell products would need to go through this additional flow to set up a Stripe account. Payments could only be processed once this account is established, otherwise, they would need to make anonymous purchases.
 
 
 ### 3. Custom Account
