@@ -19,12 +19,12 @@ There is a corresponding jenkins pipeline ([cc-smoke-tests](https://jenkins.riv.
 
 ### Cypress suite
 
- [consumer-client](https://github.com/10eTechnology/consumer-client/tree/master/cypress)
+ [consumer-client](https://source.com
 
 
 ### Required env vars:
 
-Cypress tests will log in using a special acceptance test user with credentials that are stored in env vars. Cypress env var values are stored [here](https://github.com/10eTechnology/consumer-client/blob/master/cypress.json). To run locally, you will need to add your own entries for `ENTERPRISE_USER` and `ENTERPRISE_USER_PASSWORD` under the “env” key. Unless specified otherwise the tests will run against stage, so you can temporarily fill in your own user credentials there.
+Cypress tests will log in using a special acceptance test user with credentials that are stored in env vars. Cypress env var values are stored [here](https://source.com. To run locally, you will need to add your own entries for `ENTERPRISE_USER` and `ENTERPRISE_USER_PASSWORD` under the “env” key. Unless specified otherwise the tests will run against stage, so you can temporarily fill in your own user credentials there.
 
 
 ### Spinning up local cypress

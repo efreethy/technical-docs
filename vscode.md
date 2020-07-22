@@ -42,7 +42,7 @@ Go ahead and fill in the blanks using the following
 
 
 
-(Project repo can be found [here](https://github.com/10eTechnology/integration-tests))
+(Project repo can be found [here](https://source.com
 
 With this configuration saved you should be ready to go. 
 
