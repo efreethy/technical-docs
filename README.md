@@ -1,3 +1,5 @@
+### A collection of engineering docs created for software platform
+(sensitive details obfuscated) 
 ```
 platform-docs
  ├── [Mob X](mob-x.md)
