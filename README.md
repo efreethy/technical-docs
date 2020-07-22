@@ -1,4 +1,4 @@
-# Software platform documentation
+# Platform docs
 ### A handful of documentation for projects I've worked on over the years. Covers mostly data modeling, system architecture, feature specs.
 #### (important!: sensitive details obfuscated) 
 ```
