@@ -9,7 +9,7 @@ Live events can be as expensive as they are exciting.
 
 Some orders, such as those containing membership plans, can cost thousands or even tens of thousands of dollars.
 
- In service of both the fan and our org partners, [company] will lessen the financial burden on the purchaser by supporting flexible** installment plans** on orders.
+ In service of both the customer and our org partners, [company] will lessen the financial burden on the purchaser by supporting flexible** installment plans** on orders.
 
 
 ## **Important detail about naming**
