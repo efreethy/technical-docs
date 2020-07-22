@@ -1,3 +1,4 @@
+```
 platform-docs
  ├── mob-x.md
  ├── multi-tenant.md
@@ -9,3 +10,4 @@ platform-docs
  ├── stripe-payments.md
  ├── user-registration.md
  └── vscode.md
+ ```
