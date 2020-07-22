@@ -28,8 +28,8 @@ Go ahead and fill in the blanks using the following
       "name": "Integration tests",
       "program": "${workspaceFolder}/index.js",
       "env": {
-        "ENTERPRISE_USER": "test@rival-test.com",
-        "ENTERPRISE_USER_PASSWORD": "RivalKSE",
+        "ENTERPRISE_USER": "test@[company]-test.com",
+        "ENTERPRISE_USER_PASSWORD": "[company][customer]",
         "API_ENDPOINT": "http://gateway:9000/{service}",
         "PUBSUB_ENDPOINT": "ws://mqtt:1884",
         "PUBSUB_PREFIX": "docker",

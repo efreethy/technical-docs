@@ -58,7 +58,7 @@ If all checks succeed, user-service will:
 
 ### **Making things easy for our consumers**
 
-We will want to abstract away the whole process of obtaining a service token from our library  consumers. We can wrap the whole token fetching process in a shared method `get_service_token()`, and expose that through a common library like `rival-authentication`. Any rival process with an AWS context can import this function to obtain a service token.
+We will want to abstract away the whole process of obtaining a service token from our library  consumers. We can wrap the whole token fetching process in a shared method `get_service_token()`, and expose that through a common library like `[company]-authentication`. Any [company] process with an AWS context can import this function to obtain a service token.
 
 ### **Scoping things down**
 

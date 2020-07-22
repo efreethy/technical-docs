@@ -65,11 +65,11 @@ Its worth noting that the `cc-smoke-test` pipeline always runs against the lates
 If you want to more closely mimic the test runtime being used in jenkins - you can run the following
 
 ```
-docker run --rm --env CYPRESS_RIVAL_API_ENVIRONMENT=stage \
-    --env CYPRESS_RIVAL_CONSUMER_ENVIRONMENT=stage \
-    --env CYPRESS_RIVAL_ENTERPRISE_ENVIRONMENT=stage \
+docker run --rm --env CYPRESS_[company]]_API_ENVIRONMENT=stage \
+    --env CYPRESS_[company]]_CONSUMER_ENVIRONMENT=stage \
+    --env CYPRESS_[company]]_ENTERPRISE_ENVIRONMENT=stage \
     --env [CYPRESS_ENTERPRISE_USER=acceptance-test-enterprise-user-stage@riv.al](mailto:CYPRESS_ENTERPRISE_USER=acceptance-test-enterprise-user-stage@riv.al) \
     --env CYPRESS_ENTERPRISE_USER_PASSWORD=<redacted> \
-    --env NO_COLOR=1 -v "$(pwd)":/workdir -w /workdir [rival-docker.jfrog.io/cypress:3.6.0](http://rival-docker.jfrog.io/cypress:3.6.0) cypress run --browser chrome
+    --env NO_COLOR=1 -v "$(pwd)":/workdir -w /workdir [[company]]-docker.jfrog.io/cypress:3.6.0](http://[company]]-docker.jfrog.io/cypress:3.6.0) cypress run --browser chrome
 ```
 

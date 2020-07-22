@@ -1,11 +1,11 @@
-# Rival / Auth0 Integration
+# Auth0 Integration
 
 
 **OVERVIEW**
 
 Auth0 is a provider of authentication and authorization services. They have an offering of authentication workflows to fit the needs of a variety of use cases.
 
-At Rival we use the [Resource Owner Password](https://auth0.com/docs/api-auth/tutorials/password-grant) authentication flow. In this flow the end-user is asked to fill in credentials (username/password) using an interactive form. This information is later on sent to the Client and exchanged with an Authorization Server for a short lived access token. This token is used for authentication on subsequent api requests.
+At [company] we use the [Resource Owner Password](https://auth0.com/docs/api-auth/tutorials/password-grant) authentication flow. In this flow the end-user is asked to fill in credentials (username/password) using an interactive form. This information is later on sent to the Client and exchanged with an Authorization Server for a short lived access token. This token is used for authentication on subsequent api requests.
 
 
 ### OAuth 2.0 terminology
@@ -33,7 +33,7 @@ _Architecture_
 
 
 **Multiple Environments:**
-In order to [support multiple environments](https://auth0.com/docs/dev-lifecycle/setting-up-env), we have namespaced auth0 accounts for each environment ([https://rival-dev.auth0.com](https://rival-dev.auth0.com/), [https://rival-int.auth0.com](https://rival-dev.auth0.com/), etc). Each environment will in turn authenticate against these endpoints as well perform standard user management operations.
+In order to [support multiple environments](https://auth0.com/docs/dev-lifecycle/setting-up-env), we have namespaced auth0 accounts for each environment ([https://[company]-dev.auth0.com](https://[company]-dev.auth0.com/), [https://[company]-int.auth0.com](https://[company]-dev.auth0.com/), etc). Each environment will in turn authenticate against these endpoints as well perform standard user management operations.
 
 
 # Environment Setup
@@ -45,11 +45,11 @@ Each environment account needs to complete the following set up from the auth0 w
 1. Account Settings >  Default Directory = Username-Password-Authentication
 2. Create a client: 
     1. Clients > Create Client
-    2. name: rival-(dev|int|etc) 
-3. Clients > rival-(dev|int|etc) > Token Endpoint Authentication Method > Post
-4. Clients > rival-(dev|int|etc)  > (inside Advanced settings in Client → settings) Grant Types > Ensure “password” and “client_credentials” are set
+    2. name: [company]-(dev|int|etc) 
+3. Clients > [company]-(dev|int|etc) > Token Endpoint Authentication Method > Post
+4. Clients > [company]-(dev|int|etc)  > (inside Advanced settings in Client → settings) Grant Types > Ensure “password” and “client_credentials” are set
 5. Finally the management api needs to authorize the client for user operations.
-    1. Apis > Auth0 Management Api > Non-Interactive clients > rival-{env}. Select AUTHORIZE and choose CRUD operations for user scopes and save again
+    1. Apis > Auth0 Management Api > Non-Interactive clients > [company]-{env}. Select AUTHORIZE and choose CRUD operations for user scopes and save again
 
 **Refresh Token Flow**
 Access tokens are short lived - meaning there is a chance they will expire in the middle of user session. We have a process for requesting new access

@@ -23,11 +23,11 @@ From a user experience perspective this can be bothersome for a couple reasons:
     * If each team has a designated employee with a similar role, we have a total of N*(N-1) additional accounts by season end.
 * A user must understand they have N representations in the enterprise client, even if the email is exactly the same, which can lead to confusion.
 
-There is additional confusion for enterprise users who are members of multiple subsidiary orgs. For example, a member of Kroenke Rams, Kroenke Avalanche, Kroenke Arsenal, and Dallas Cowboys would need to maintain a username / password for each sub-org, in addition to any external orgs. The continual process of establishing unique credentials for subsidiary orgs could be abrasive.
+There is additional confusion for enterprise users who are members of multiple subsidiary orgs. For example, a member of [customer] [team], [customer] [team], [customer] Arsenal, and Dallas Cowboys would need to maintain a username / password for each sub-org, in addition to any external orgs. The continual process of establishing unique credentials for subsidiary orgs could be abrasive.
 
 ## **Solution**
 
-* Brand Rival as the singular identity provider for the enterprise client. From both the individual and organization perspective, Rival is a candidate identity provider.
+* Brand [company] as the singular identity provider for the enterprise client. From both the individual and organization perspective, [company] is a candidate identity provider.
 * Establish a single “enterprise user account” for enterprise users who share identity—i.e., they are the same person. 
 * Communicate to enterprise users that password registration is a one time process. Their credentials can be used to authenticate into the enterprise client for a specific organization, provided the organization has added them as a user from their enterprise client. 
 
@@ -44,7 +44,7 @@ Collapse organization specific user pools into a single pool.
 
 A single user pool is limited to 25 identity providers.
 
-* 25 identity providers should be more than enough to support a live launch with KSE, but as we on board new organizations we will eventually need to request an increase. It is still unknown how likely it is that AWS would reject this request.
+* 25 identity providers should be more than enough to support a live launch with [customer], but as we on board new organizations we will eventually need to request an increase. It is still unknown how likely it is that AWS would reject this request.
 * If AWS permanently restricts us from increasing this limit, we would need to develop a strategy for partitioning a single logical enterprise user pool into multiple partitioned user pools. We would add more identity providers to the partitions. This could get hairy, and might pigeon hole us into going with approach no. 2.
 
 ### Implications on THE DB
@@ -56,7 +56,7 @@ A single user pool is limited to 25 identity providers.
 
 *  An enterprise user’s initial invitation will register them into this pool.
 * Subsequent invitations from other organizations will skip adding them to the pool.
-* Federated users don’t configure a username / password, and will still enter the pool in an unregistered state. They will remain this way until an organization marks them as managed. When this happens, they will be prompted to register a username / password with the Rival platform.
+* Federated users don’t configure a username / password, and will still enter the pool in an unregistered state. They will remain this way until an organization marks them as managed. When this happens, they will be prompted to register a username / password with the [company] platform.
 
 ### Implications on Log In
 
@@ -95,7 +95,7 @@ Spawning a pool per organization would preserve the existing complexity in our s
 
 *  An enterprise user’s initial invitation will register them into an organization specific pool. This can be considered the users’ primary pool.
 * On subsequent invitations, the user is prompted to provide their original set of credentials. These credentials will be used against the primary pool, and on success our system will silently register them into the secondary pool using the same credentials.
-* Federated users don’t configure a username / password, and will still enter their organization specific pool in an unregistered state. They will remain this way until an organization marks them as managed. When this happens, they will be prompted to register a username / password with the Rival platform. 
+* Federated users don’t configure a username / password, and will still enter their organization specific pool in an unregistered state. They will remain this way until an organization marks them as managed. When this happens, they will be prompted to register a username / password with the [company] platform. 
 
 ### Implications on Log In
 

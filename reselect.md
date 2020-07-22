@@ -1,4 +1,4 @@
-# Rival, Redux, and Reselect
+# [company], Redux, and Reselect
 
 ## TLDR
 
@@ -7,7 +7,7 @@ If repeated/redundant work in component render cycles becomes a material concern
 
 ## Motivation
 
-At Rival, Redux was originally the arbiter of virtually all state management in our front end architecture. As our application grew in size and complexity, Redux introduced a performance bottleneck - due to the frequency it would trigger re-renders, and by extension repeat work, in our components. A lot of this repeat work was pointless, and contributed to our movement away from Redux as a state management tool. What I found fascinating about Reselect is that it was meant to solve this problem specifically. 
+At [company], Redux was originally the arbiter of virtually all state management in our front end architecture. As our application grew in size and complexity, Redux introduced a performance bottleneck - due to the frequency it would trigger re-renders, and by extension repeat work, in our components. A lot of this repeat work was pointless, and contributed to our movement away from Redux as a state management tool. What I found fascinating about Reselect is that it was meant to solve this problem specifically. 
 
 I think its worth understanding the benefits Reselect has to offer, and how it might be used to improve our React based applications and frameworks - even without Redux.
 

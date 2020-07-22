@@ -5,8 +5,8 @@
 ## Overview
 
 * Clarify the key concepts of a payment.
-* Breakout some common payment scenarios on the Rival platform.
-* Introduce Stripe, Stripe Accounts, and discuss the pros/cons of different account types when applied to Rival's anticipated payment scenarios.
+* Breakout some common payment scenarios on the [company] platform.
+* Introduce Stripe, Stripe Accounts, and discuss the pros/cons of different account types when applied to [company]'s anticipated payment scenarios.
 
 ## So what is a payment anyway?
 
@@ -15,19 +15,19 @@ A payment, in the most general sense, describes a transfer of funds from a ***pa
 **Key Concept: **We can think of both the payer and payee as **payment participants** on a payments platform. Participants can exchange funds because they have both registered with the platform.
 
 
-## What do payments mean to Rival?
+## What do payments mean to [company]?
 
-* The Rival platform will support a variety of *payment scenarios*.
-* For each scenario, Rival must identify the relevant **payment participants** and facilitate a transfer of funds between them.
-* Rival must satisfy additional business rules that surround payments, such as scoping inventory to owners, gating access on event day, meeting compliance requirements, etc.
+* The [company] platform will support a variety of *payment scenarios*.
+* For each scenario, [company] must identify the relevant **payment participants** and facilitate a transfer of funds between them.
+* [company] must satisfy additional business rules that surround payments, such as scoping inventory to owners, gating access on event day, meeting compliance requirements, etc.
 
 ## So what are these payment scenarios - really?
 
 In most scenarios, the **payment participant **is one of:
 
-*  ***Rival user***
-*  ***Rival org **(an org on the Rival platform, like KSE)*
-*  ***The Rival platform***
+*  ***[company] user***
+*  ***[company] org **(an org on the [company] platform, like [customer])***
+*  ***The [company] platform***
 
 And in future scenarios, the **payment participant **could include:
 
@@ -39,44 +39,44 @@ And in future scenarios, the **payment participant **could include:
 
 **Vanilla payment scenario - an order purchase :**
 
-* The payer is a Rival user, and the payee is a Rival org hosting an event.
-* Funds flow from the Rival User to the Rival Org.
-* In exchange for the funds, the Rival User is granted event access on event day.
-* The Rival platform will ensure the payment is processed:
-    * In the happy path, Rival will scope the user to their selected inventory, to be used later on event day for granting access.
-    * In some failure cases, Rival must ensure funds are reversed, in addition to relinquishing any assigned inventory.
+* The payer is a [company] user, and the payee is a [company] org hosting an event.
+* Funds flow from the [company] User to the [company] Org.
+* In exchange for the funds, the [company] User is granted event access on event day.
+* The [company] platform will ensure the payment is processed:
+    * In the happy path, [company] will scope the user to their selected inventory, to be used later on event day for granting access.
+    * In some failure cases, [company] must ensure funds are reversed, in addition to relinquishing any assigned inventory.
 
 **Other relevant payment scenarios:**
 
-* Refunds: The payer and payee may be switched. Funds will return to the Rival User, taken from the Rival org.
-* Platform fee: The Rival platform might be an additional payee.
-* Peer to Peer resale: The payer and payee could both be Rival Users
-* Group Sales, B2B payouts: The payer and payee could both be Rival orgs
+* Refunds: The payer and payee may be switched. Funds will return to the [company] User, taken from the [company] org.
+* Platform fee: The [company] platform might be an additional payee.
+* Peer to Peer resale: The payer and payee could both be [company] Users
+* Group Sales, B2B payouts: The payer and payee could both be [company] orgs
 
 
 **PAYMENT SCENARIO BREAKOUT**
 
 |Urgency	|Scenario	|Payer → Payee	|
 |---	|---	|---	|
-|Live launch	|Traditional payments applied to orders	|Rival User → Rival Org	|
-|Live launch	|Order Refunds, Disputed Charges	|Rival Org → Rival User	|
-|Live launch	|Optional Rival platform fee	|Rival User → Rival Platform	|
-|Live launch	|Canceled Events	|Rival Org → Rival User                              
-and/or (Rival Platform → Rival Org)
+|Live launch	|Traditional payments applied to orders	|[company] User → [company] Org	|
+|Live launch	|Order Refunds, Disputed Charges	|[company] Org → [company] User	|
+|Live launch	|Optional [company] platform fee	|[company] User → [company] Platform	|
+|Live launch	|Canceled Events	|[company] Org → [company] User                              
+and/or ([company] Platform → [company] Org)
 	|
 |	|	|	|
-|Post-launch	|Peer to peer ticket resales	|Rival User → Rival User	|
+|Post-launch	|Peer to peer ticket resales	|[company] User → [company] User	|
 |Post-launch	|Tools for B2B payout 
-(eg: LA Rams send the 49ers a proportion of total ticket sales)	|Rival Org → Rival Org    
+(eg: LA [team] send the 49ers a proportion of total ticket sales)	|[company] Org → [company] Org    
          
-and/or (Rival Org → Tertiary Org)
+and/or ([company] Org → Tertiary Org)
 	|
-|Post-launch	|Funds corresponding to a purchase made on a third party site, like StubHub	|Third party reseller → Rival Platform	|
+|Post-launch	|Funds corresponding to a purchase made on a third party site, like StubHub	|Third party reseller → [company] Platform	|
 
 
 A couple things to note about the above:
 
-*  We see that Rival Users, Rival Orgs, and the Rival Platform all have the potential to be either the payer or the payee.
+*  We see that [company] Users, [company] Orgs, and the [company] Platform all have the potential to be either the payer or the payee.
 * Funds can flow in arbitrary directions.
 
 
@@ -102,17 +102,17 @@ The most fundamental capability of Stripe is the **Stripe Account**:
 * For disputes, Stripe will automatically handle the resolution of funds between participants
 * Stripe has a webhook event system which notifies API customers who might need to complete additional tasks based on updated charges.
 
-At Rival, any entity capable of being a **payment participant** can be granted a Stripe Account by our System. In the future, if Rival chooses to integrate with other payment platforms, these entities can be the **payment participants **of other payment platforms.
+At [company], any entity capable of being a **payment participant** can be granted a Stripe Account by our System. In the future, if [company] chooses to integrate with other payment platforms, these entities can be the **payment participants **of other payment platforms.
 
 ## Stripe Account Tiers
 
-Stripe exposes Stripe Accounts through a product called [Stripe Connect](https://stripe.com/docs/connect). Pricing can be found [here](https://stripe.com/us/connect/pricing).
+Stripe exposes Stripe Accounts through a product called [Stripe Connect](https://stripe.com/docs/connect). Pricing can be found [here](https://stripe.com/us/connect/[entity]).
 
 Stripe Connect offers three different tiers of Stripe Accounts. Each category varies widely in the user registration experience.
 [Image: Image.jpg]
 ### 1. Standard Account
 
-Account holders configure this account independently with Stripe. Later on, in the Rival platform, account holders authorize Rival platform to apply payments to/from this account.
+Account holders configure this account independently with Stripe. Later on, in the [company] platform, account holders authorize [company] platform to apply payments to/from this account.
 Pros
 
 * Standard accounts are the easiest to integrate
@@ -128,11 +128,11 @@ Cons
 
 ### 2. Express Account
 
-Account holders begin their journey in the Rival platform and are redirected to a branded flow on Stripe. On Stripe they will provision their Stripe account details and are later redirected back to the Rival platform on completion.
+Account holders begin their journey in the [company] platform and are redirected to a branded flow on Stripe. On Stripe they will provision their Stripe account details and are later redirected back to the [company] platform on completion.
 
 * Pros:
     * Express accounts are flexible enough to support most payment scenarios
-    * Works ideally for payments made between our platform and Rival organizations,  or even third-party/tertiary organizations, as this is something that could be a one-time onboarding step.
+    * Works ideally for payments made between our platform and [company] organizations,  or even third-party/tertiary organizations, as this is something that could be a one-time onboarding step.
     * Stripe account management happens on Stripe, which provides a [powerful management dashboard.](https://stripe.com/docs/dashboard)
 * Cons:
     * Express account holders must be based in the US and must have an SMS enabled phone number for registration.
@@ -144,7 +144,7 @@ The big drawback to this approach is in the general consumer case. Any consumers
 
 ### 3. Custom Account
 
-With a Custom Account, the Stripe account setup process is completely governed by Rival.
+With a Custom Account, the Stripe account setup process is completely governed by [company].
 
 Pros
 
@@ -155,7 +155,7 @@ Pros
 
 Cons
 
-* The Rival platform is responsible for building all front-end behaviors and collecting all required account information.
-* Rival is ultimately responsible for any loss due to fraud.
-* Stripe account management would happen on the Rival platform through the Stripe API, so we would need to build out additional tooling.
+* The [company] platform is responsible for building all front-end behaviors and collecting all required account information.
+* [company] is ultimately responsible for any loss due to fraud.
+* Stripe account management would happen on the [company] platform through the Stripe API, so we would need to build out additional tooling.
 

@@ -44,10 +44,10 @@ The con here is again reconciling the way data flows through our api. Supposing 
 ![image info](./images/multi-tenant3.png)
 The main idea here is to strip down the application user table to be a bare bones identity store. Enterprise users are broken out into their own table, with all of the standard attributes defined. This table relates to application user through join table inheritance. If we detect an email match on a create, we append a new record onto the enterprise user table, and maintain a mapping back to the application user. 
 
-For system and fan users, their standard attributes are defined on a shared parent table **rival_user **(names suggestions are highly welcomed here). They would relate to the parent through join table inheritance.
+For system and fan users, their standard attributes are defined on a shared parent table **[company]_user **(names suggestions are highly welcomed here). They would relate to the parent through join table inheritance.
 
-One key advantage here is that a single** application_user** identity can now be both an enterprise, fan, and system user - this is something not possible with the previous two set ups. Also the join table inheritance would allow us to keep natural service / api interactions behind the **/system_user** **/fan_user** endpoints, as their parent **rival_user** would act as a hidden table.
+One key advantage here is that a single** application_user** identity can now be both an enterprise, fan, and system user - this is something not possible with the previous two set ups. Also the join table inheritance would allow us to keep natural service / api interactions behind the **/system_user** **/fan_user** endpoints, as their parent **[company]_user** would act as a hidden table.
 
-Note: The application_user > rival_user > system_user join table inheritance hierarchy might not be supported by sql alchemy, as join table inheritance might only work one level deep.
+Note: The application_user > [company]_user > system_user join table inheritance hierarchy might not be supported by sql alchemy, as join table inheritance might only work one level deep.
 
-A slight disadvantage here is the redefinition of standard attributes on both **enterprise_user**, and **rival_user.**
+A slight disadvantage here is the redefinition of standard attributes on both **enterprise_user**, and **[company]_user.**

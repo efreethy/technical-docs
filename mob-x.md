@@ -5,7 +5,7 @@ Status: Draft
 
 ## **TLDR**
 
-There appears to be a lot of intersection between the capabilities of MobX and the demands of Rivals front end application state model. As our state model becomes more complex, introducing more derived state (such as search indexes, venue map state trees, etc) - as well as more vectors for state updates (pub-sub, streams, and queues), we should keep this solution in mind as an option to alleviate some of the technical baggage that comes along for the ride.
+There appears to be a lot of intersection between the capabilities of MobX and the demands of [company]s front end application state model. As our state model becomes more complex, introducing more derived state (such as search indexes, venue map state trees, etc) - as well as more vectors for state updates (pub-sub, streams, and queues), we should keep this solution in mind as an option to alleviate some of the technical baggage that comes along for the ride.
 
 ## Goals 
 
@@ -41,7 +41,7 @@ MobX is a battle tested library that makes state management simple and scalable 
 
 ## Enter MobX
 
-* At its essence - the purpose of MobX is to solve the application state maintenance problem. It offers a light-weight api (45.9kB minified / 3.5kb gzipped) that is intended to replace and simplify the areas of an app which are dedicated to state maintenance. It hooks in very naturally into React based applications, and can be used as a companion to any state model. More notably for Rival, it can work well with state models connected to asynchronous streams of events.
+* At its essence - the purpose of MobX is to solve the application state maintenance problem. It offers a light-weight api (45.9kB minified / 3.5kb gzipped) that is intended to replace and simplify the areas of an app which are dedicated to state maintenance. It hooks in very naturally into React based applications, and can be used as a companion to any state model. More notably for [company], it can work well with state models connected to asynchronous streams of events.
 
 
 
@@ -88,7 +88,7 @@ The [MobX documentation](https://mobx.js.org/index.html) is comprehensive and pr
 
 * Pretty much anywhere we want to keep application state in sync across disparate regions of the application.
 * The Venue map is a complex state tree that is subject to change as entity changes stream in through pub-sub. MobX could hook into entity change events in order to keep this state tree consistent.
-* Our shared sdk doesn't have any global state management, but individuals services do. These services could be promoted to be observables. We could define React component wrappers in `rival-react` which wrap these services and propagate changes to children components. MobX will handle state change detection and update so we won't have to. The library might have a use in generalizing our current `StateContainer` pattern.
+* Our shared sdk doesn't have any global state management, but individuals services do. These services could be promoted to be observables. We could define React component wrappers in `[company]-react` which wrap these services and propagate changes to children components. MobX will handle state change detection and update so we won't have to. The library might have a use in generalizing our current `StateContainer` pattern.
 * For application state that is derived, such as search indexes used by esjs, or other arbitrary derivations such as lookup tables - these could be designated as observers of the application state they depend on.
 * If we ever have a need to simplify areas like pub-sub, stream processing, or queue / chunk processing - MobX will be there to abstract away the complicated aspects of state invalidation.
 

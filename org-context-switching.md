@@ -1,4 +1,4 @@
-## **[DEPRECATED] Organization Context Switching - Front end overview**
+## Organization Context Switching - Front end overview**
 
 
 Last edited: 11 August 2018
@@ -16,8 +16,8 @@ Give enterprise users the ability to change their organization context.
 
 ### RECAP - A High level example:
 
-* Consider an enterprise user who belongs to Kroenke Rams, Kroenke Avalanche, and Kroenke Arsenal
-* Suppose this user authenticates into the EC of Kroenke Rams. 
+* Consider an enterprise user who belongs to [customer] [team], [customer] [team], and [customer] Arsenal
+* Suppose this user authenticates into the EC of [customer] [team]. 
 * This user should have access to a tool that allows them to see all other organizations they are a member of. 
 * They should have the ability to select an org from this list, and authenticate into the EC of that org.
 * Before they are granted access, they must complete the authentication flow that was provisioned for them by the selected org.
