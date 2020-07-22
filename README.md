@@ -1,6 +1,7 @@
+#### ***Important: *** sensitive details have been obfuscated, and entity names anonymized) 
+
 # Platform docs
 ### A handful of documentation for projects I've worked on over time. Covers topics on data modeling, system architecture, feature specs.
-#### [important] sensitive details have been obfuscated, and entity names anonymized) 
 ```
 platform-docs
  ├── [Mob X](mob-x.md)
