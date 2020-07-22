@@ -1,5 +1,5 @@
 # Software platform documentation
-### A handful of documentation for projects I've worked on over the years
+### A handful of documentation (eg: modeling/architecture/feature specs) for projects I've worked on over the years
 #### (important!: sensitive details obfuscated) 
 ```
 platform-docs
