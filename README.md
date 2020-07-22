@@ -4,7 +4,7 @@
 ### A handful of documentation for projects I've worked on over time. Covers topics on data modeling, system architecture, feature specs.
 ```
 platform-docs
- ├── [Mob X](mob-x.md)
+ ├── mob-x.md
  ├── multi-tenant.md
  ├── org-context-switching.md
  ├── payment-party.md
