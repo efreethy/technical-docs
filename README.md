@@ -1,6 +1,6 @@
 ```
 platform-docs
- ├── mob-x.md
+ ├── [Mob X](mob-x.md)
  ├── multi-tenant.md
  ├── org-context-switching.md
  ├── payment-party.md
