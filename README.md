@@ -1,6 +1,6 @@
 # Software platform documentation
-## A collection of documentation for projects I've worked on over the years
-### (sensitive details obfuscated) 
+### A handful of documentation for projects I've worked on over the years
+#### (important!: sensitive details obfuscated) 
 ```
 platform-docs
  ├── [Mob X](mob-x.md)
