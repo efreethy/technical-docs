@@ -1,4 +1,4 @@
-***Important:*** sensitive details have been **obfuscated**, and entities **anonymized**) 
+***Important:*** sensitive details have been **obfuscated**, and entities **anonymized**
 
 # Platform docs
 ### A handful of documentation for projects I've worked on over time. Covers topics on data modeling, system architecture, feature specs.
