@@ -1,4 +1,4 @@
-# **[DEPRECATED] Simplifying Enterprise User Registration**
+# ** Simplifying Enterprise User Registration**
 
 
 Last edited: 7 August 2018
